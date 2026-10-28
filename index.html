@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>北海道自駕手冊</title>
+<meta name="description" content="北海道 6 天 5 夜自駕旅遊手冊：航班、路線、每日行程、住宿、日本退稅新制與出國必帶清單。">
+<meta property="og:title" content="北海道自駕手冊">
+<meta property="og:description" content="2026.11.05 — 11.10　北海道 6 天 5 夜自駕">
+<meta name="theme-color" content="#F7F8F5">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235A86A3' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M12 2v20M4.9 6.5l14.2 11M4.9 17.5l14.2-11M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Huninn&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="nav" aria-label="主選單">
+  <div class="nav-in">
+    <a class="brand" href="#top">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5A86A3" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M4.9 6.5l14.2 11M4.9 17.5l14.2-11M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5"/></svg>
+      <b>北海道手冊</b><small>2026</small>
+    </a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="開啟選單">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <ul class="links" id="navLinks">
+      <li><a href="#flights" data-sec>航班</a></li>
+      <li><a href="#route" data-sec>路線</a></li>
+      <li><a href="#days" data-sec>每日行程</a></li>
+      <li><a href="#stays" data-sec>住宿</a></li>
+      <li><a href="#check" data-sec>出發前確認</a></li>
+      <li><a class="pill" href="#packing" id="packLink">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="7" width="14" height="13" rx="3"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M5 12h14"/></svg>
+        出國必帶清單</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ VIEW: TRIP ============ -->
+<div id="viewTrip">
+  <header class="hero" id="top">
+    <div class="hero-box">
+      <svg class="scene" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <rect width="1440" height="800" fill="#C9D7E0"/>
+        <circle cx="1120" cy="210" r="70" fill="#EEF2F3" opacity=".8"/>
+        <path d="M0 470 L180 330 L300 400 L470 250 L620 380 L780 290 L950 410 L1120 280 L1280 380 L1440 320 L1440 800 L0 800Z" fill="#AFC3D0"/>
+        <path d="M470 250 L520 290 L498 287 L470 305 L446 288 L425 280Z M1120 280 L1170 318 L1146 314 L1120 330 L1096 315 L1075 306Z M180 330 L222 360 L200 357 L180 370 L162 358Z" fill="#F4F7F8"/>
+        <path d="M0 560 L160 490 L360 540 L560 470 L760 530 L960 460 L1160 520 L1320 480 L1440 510 L1440 800 L0 800Z" fill="#E8EEF1"/>
+        <path d="M0 640 L240 600 L520 630 L800 590 L1080 625 L1440 600 L1440 800 L0 800Z" fill="#FBFCFC"/>
+        <g fill="#7F9BAE"><path d="M210 610 l18 -60 l18 60z"/><path d="M240 615 l14 -46 l14 46z"/><path d="M1180 600 l20 -66 l20 66z"/><path d="M1214 606 l14 -46 l14 46z"/><path d="M1150 606 l12 -40 l12 40z"/></g>
+      </svg>
+      <img id="heroImg" src="images/hero.jpg" alt="北海道的冬日雪景" data-fallback="https://farm4.staticflickr.com/3935/33319518702_3148500169_k.jpg">
+      <div class="hero-tint" aria-hidden="true"></div>
+      <div class="snow" id="heroSnow" aria-hidden="true"></div>
+      <button class="snow-btn" id="snowBtn" type="button" aria-pressed="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M4.9 6.5l14.2 11M4.9 17.5l14.2-11M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5"/></svg>
+        <span>停止下雪</span>
+      </button>
+      <div class="vert" aria-hidden="true">初雪の北國・自駕之旅</div>
+      <div class="hero-copy">
+        <div class="eyebrow-w rise">HOKKAIDO ROAD TRIP</div>
+        <h1 class="rise" style="animation-delay:.15s">北海道</h1>
+        <div class="hero-meta rise" style="animation-delay:.35s">
+          <div class="hero-date">11.05 THU — 11.10 TUE</div>
+          <p>6 天 5 夜自駕。高雄出發，新千歲入境，經登別、洞爺湖、小樽、札幌、旭川、美瑛、富良野，再回到札幌。</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="wx-wrap wrap" aria-labelledby="wx-h">
+    <div class="wx-card">
+      <div class="wx-now" aria-live="polite">
+        <div class="label" id="wx-h">LIVE WEATHER</div>
+        <div class="wx-status" id="wxStatus">讀取北海道即時天氣…</div>
+        <div class="wx-main">
+          <span class="wx-icon" id="wxIcon" aria-hidden="true"></span>
+          <span class="wx-temp"><span id="wxTemp">—</span><small>°C</small></span>
+          <div class="wx-desc">
+            <div class="wx-place" id="wxPlace">—</div>
+            <div class="wx-sub" id="wxSub"></div>
+          </div>
+        </div>
+        <div class="wx-time" id="wxTime"></div>
+      </div>
+      <ol class="wx-days" id="wxDays" aria-label="各天地區的即時溫度"></ol>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section id="flights" aria-labelledby="flights-h">
+      <div class="head"><div><div class="label">FLIGHTS</div><h2 class="h2" id="flights-h">航班資訊</h2><p class="sub">台灣虎航・時間依官方最終核准為主</p></div></div>
+      <div class="flights" id="flightList"></div>
+    </section>
+
+    <section id="route" aria-labelledby="route-h">
+      <div class="head">
+        <div><div class="label">ROUTE</div><h2 class="h2" id="route-h">自駕路線</h2></div>
+        <a class="btn-line" id="routeLink" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          在 Google Maps 開啟全程路線
+        </a>
+      </div>
+      <div class="panel">
+        <div class="road" aria-hidden="true"><div class="car"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16h14v-4l-2-5H7l-2 5zM5 12h14"/><circle cx="8" cy="16.5" r="1.6"/><circle cx="16" cy="16.5" r="1.6"/></svg></div></div>
+        <ol class="stops" id="stopList"></ol>
+        <p class="sub" style="margin-top:18px">點任一站，直接跳到那一天的行程。</p>
+      </div>
+    </section>
+
+    <section id="days" aria-labelledby="days-h">
+      <div class="head"><div><div class="label">ITINERARY</div><h2 class="h2" id="days-h">每日行程</h2></div></div>
+      <div class="tabs" role="tablist" aria-label="選擇日期" id="tabs"></div>
+      <div id="dayPanel" role="tabpanel"></div>
+    </section>
+
+    <section id="stays" aria-labelledby="stays-h">
+      <div class="head"><div><div class="label">STAYS</div><h2 class="h2" id="stays-h">住宿與早餐</h2></div></div>
+      <div class="stays" id="stayList"></div>
+    </section>
+
+    <section id="check" aria-labelledby="check-h">
+      <div class="head">
+        <div><div class="label">CHECKLIST</div><h2 class="h2" id="check-h">出發前確認</h2></div>
+        <a class="btn-line" href="#packing">行李還沒收？看必帶清單 →</a>
+      </div>
+      <div class="panel checks" id="checkList"></div>
+    </section>
+  </main>
+</div>
+
+<!-- ============ VIEW: PACKING ============ -->
+<div id="viewPack" hidden>
+  <header class="pk-head">
+    <div class="pk-box">
+      <div class="snow" id="packSnow" aria-hidden="true"></div>
+      <div class="wrap pk-in">
+        <div>
+          <div class="label">PACKING LIST</div>
+          <h1>出國必帶清單</h1>
+          <p>11 月的北海道白天約 5–10°C，旭川、富良野早晚可能到 0°C 以下，也可能遇到初雪。自駕記得帶齊駕照與日文譯本。</p>
+        </div>
+        <div class="progress">
+          <div class="row"><span>已打包</span><span><strong id="pkDone">0</strong> / <span id="pkTotal">0</span></span></div>
+          <div class="bar" aria-hidden="true"><i id="pkBar"></i></div>
+          <button class="reset" id="pkReset" type="button">全部重來</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="wrap" style="gap:0">
+    <div class="groups" id="groups"></div>
+    <div class="back"><a href="#top">← 回到行程手冊</a></div>
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
