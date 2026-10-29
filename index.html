@@ -34,6 +34,9 @@
       <li><a class="pill" href="#packing" id="packLink">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="7" width="14" height="13" rx="3"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M5 12h14"/></svg>
         出國必帶清單</a></li>
+      <li><a class="pill" href="#taxrefund" id="refundLink">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/><path d="M9.5 10.5l2 2 3.5-3.5"/></svg>
+        線上退稅</a></li>
     </ul>
   </div>
 </nav>
@@ -153,6 +156,87 @@
   <main class="wrap" style="gap:0">
     <div class="groups" id="groups"></div>
     <div class="back"><a href="#top">← 回到行程手冊</a></div>
+  </main>
+</div>
+
+<!-- ============ VIEW: ONLINE TAX REFUND ============ -->
+<div id="viewRefund" hidden>
+  <header class="pk-head">
+    <div class="pk-box rf-box">
+      <div class="wrap pk-in">
+        <div>
+          <div class="label">ONLINE TAX REFUND</div>
+          <h1>線上退稅教學</h1>
+          <p>出境時用手機在 Visit Japan Web 完成退稅手續，不用排退稅機台。以下 7 個機場的國際線出發樓層可以辦理，我們回程的新千歲機場也在內。</p>
+          <div class="rf-airports" aria-label="可辦理的機場"><span class="here">新千歲</span><span>成田</span><span>羽田</span><span>中部</span><span>關西</span><span>福岡</span><span>那霸</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap rf-main">
+    <section class="panel rf-prep" aria-labelledby="rf-prep-h">
+      <div class="label">BEFORE YOU GO</div>
+      <h2 id="rf-prep-h">出發前先在 Visit Japan Web 準備好</h2>
+      <ul>
+        <li>登錄「護照的臉部照片」</li>
+        <li>登錄「入境許可證明資訊」</li>
+        <li>免稅購物結帳時，出示 Visit Japan Web 的「免稅 QR 碼」</li>
+      </ul>
+    </section>
+
+    <ol class="rf-steps">
+      <li class="rf-step">
+        <div class="rf-text">
+          <div class="rf-no"><b>1</b>STEP</div>
+          <h3>登入 Visit Japan Web</h3>
+          <p>登入後，在「入境後使用」點「免稅購買・退稅手續」，進入免稅頁面。</p>
+        </div>
+        <figure class="rf-shot wide"><img src="images/taxrefund/step1.jpg" width="900" height="1432" loading="lazy" alt="Visit Japan Web 首頁點選「免稅購買・退稅手續」，進入免稅購買與退稅手續頁面"></figure>
+      </li>
+      <li class="rf-step">
+        <div class="rf-text">
+          <div class="rf-no"><b>2</b>STEP</div>
+          <h3>連上機場退稅專用 Wi-Fi</h3>
+          <p>到國際線出發樓層後，掃 QR Code 或手動輸入，連上海關的退稅專用 Wi-Fi。</p>
+          <dl class="wifi">
+            <dt>SSID</dt><dd>Customs_WiFi_For_TaxRefund</dd>
+            <dt>PW</dt><dd>jcustoms</dd>
+          </dl>
+        </div>
+        <figure class="rf-shot wide"><img src="images/taxrefund/step2.jpg" width="900" height="444" loading="lazy" alt="退稅專用 Wi-Fi 的 QR Code，SSID 為 Customs_WiFi_For_TaxRefund，密碼 jcustoms"></figure>
+      </li>
+      <li class="rf-step">
+        <div class="rf-text">
+          <div class="rf-no"><b>3</b>STEP</div>
+          <h3>選取「退稅手續」</h3>
+          <p>回到 Visit Japan Web 的「免稅購買・退稅手續」頁面，在「離境時」點「退稅手續」。</p>
+        </div>
+        <figure class="rf-shot"><img src="images/taxrefund/step3.jpg" width="900" height="1468" loading="lazy" alt="在離境時區塊點選退稅手續按鈕"></figure>
+      </li>
+      <li class="rf-step">
+        <div class="rf-text">
+          <div class="rf-no"><b>4</b>STEP</div>
+          <h3>確認購買紀錄，按「Confirm」</h3>
+          <p>核對畫面上的免稅購買紀錄（店名、日期、金額）都正確後，點綠色的「Confirm」按鈕。</p>
+        </div>
+        <figure class="rf-shot"><img src="images/taxrefund/step4.jpg" width="900" height="1330" loading="lazy" alt="Tax Refund procedure 頁面顯示購買紀錄，下方有 Confirm 按鈕"></figure>
+      </li>
+      <li class="rf-step">
+        <div class="rf-text">
+          <div class="rf-no"><b>5</b>STEP</div>
+          <h3>確認手續結果</h3>
+          <div class="rf-result">
+            <div class="ok"><b>Completed</b>手續完成。退款依各免稅店的指示辦理。</div>
+            <div class="ng"><b>Not Completed</b>請到出發大廳的海關窗口，依海關人員要求出示商品。</div>
+          </div>
+        </div>
+        <figure class="rf-shot wide"><img src="images/taxrefund/step5.jpg" width="900" height="837" loading="lazy" alt="手續結果畫面：左邊顯示 Completed，右邊顯示 Not Completed"></figure>
+      </li>
+    </ol>
+
+    <p style="margin:0;font-size:13px;line-height:1.8;color:var(--muted)">流程與畫面取自日本國稅廳「線上退稅手續」說明，詳細內容以官方頁面為準：<a href="https://www.nta.go.jp/publication/pamph/shohi/menzei/201805/format/002/onlinetetsuzuki/guidetwn.htm" target="_blank" rel="noopener">國稅廳 線上退稅手續（繁體中文）↗</a></p>
+    <div class="back" style="margin-top:0"><a href="#top">← 回到行程手冊</a></div>
   </main>
 </div>
 

@@ -75,7 +75,7 @@
       tip:'出發前確認小樽水族館的園區開放時間。\n晚上住 Airbnb，記得買隔天早餐。',
       items:[ S('todo','飯店出發'), D('約 2 小時 15 分'), S('spot','小樽水族館',{ note:'要看園區時間', q:'おたる水族館' }), D('約 10 分'), S('spot','手宮公園',{ note:'賞楓、俯瞰小樽港', q:'手宮公園 小樽' }), S('food','小樽午餐'), S('spot','小樽運河',{ q:'小樽運河', chips:[C('堺町通商店街','堺町通り商店街 小樽'), C('LeTAO','LeTAO 本店 小樽'), C('六花亭','六花亭 小樽運河店'), C('北菓樓','北菓楼 小樽本館')] }), S('food','晚餐',{ note:'小樽找或札幌市區找', chips:[C('根室花丸','回転寿司 根室花まる 札幌'), C('一夜干','小樽 一夜干し')] }), D('約 20 分','前往手稻 Airbnb') ] },
     { date:'11/7', wd:'六', route:'札幌 → 旭川', short:'札幌・旭川',
-      stay:{ name:'Airbnb（旭川）', type:'獨棟房屋', bf:'不用準備早餐', ok:true },
+      stay:{ name:'Airbnb（旭川）', type:'獨棟房屋', bf:'不用準備早餐', ok:true, url:'https://maps.app.goo.gl/wZPQhj1Vv7Q5qVch7' },
       tip:'白色戀人公園 10:00 開園，可以悠閒出發。\n18:00 吃銀ねこ。',
       items:[ S('todo','民宿出發',{ note:'白色戀人公園 10:00 開園，可悠閒出發' }), D('約 20 分'), S('sweet','白色戀人公園',{ t:'10:00', q:'白い恋人パーク' }), S('food','午餐：Toriton 圓山店',{ q:'回転寿し トリトン 円山店' }), S('spot','北海道大學',{ t:'15:40', q:'北海道大學' }), S('spot','北海道神宮',{ q:'北海道神宮' }), D('約 2 小時','札幌出發到旭川'), S('todo','抵達旭川 Airbnb',{ note:'可休息或逛旭川市區' }), S('food','晚餐：銀ねこ',{ t:'18:00', note:"Yakitori Professional Gin'neko", q:"Yakitori Professional Gin'neko 旭川" }) ] },
     { date:'11/8', wd:'日', route:'旭川 → 美瑛 → 富良野', short:'旭川・美瑛・富良野',
@@ -83,7 +83,7 @@
       tip:'炭燒俱樂部記得確認公休日。\n小木屋要準備隔天早餐。',
       items:[ D('約 20 分','先吃早午餐'), S('food','早午餐：山惠鹿肉漢堡排',{ q:'山惠 鹿肉 ハンバーグ 旭川' }), D('約 1 小時 20 分'), S('spot','白金青池',{ q:'白金青い池' }), S('spot','白鬚瀑布',{ q:'白ひげの滝' }), S('sweet','菓子工廠／布丁工房',{ q:'富良野 布丁 菓子工房' }), S('spot','森林精靈露台',{ q:'ニングルテラス' }), S('food','晚餐',{ note:'三個選項，看當天狀況', chips:[C('森林精靈露台找吃的','ニングルテラス'), C('超商煮'), C('炭燒俱樂部（確認公休）','炭燒俱樂部 富良野')] }), D('約 5 分','從森林精靈露台到小木屋') ] },
     { date:'11/9', wd:'一', route:'富良野 → 札幌', short:'富良野・札幌',
-      stay:{ name:'Airbnb（札幌）', type:'市區獨棟房屋', bf:'早餐要準備', ok:false },
+      stay:{ name:'Airbnb（札幌）', type:'市區獨棟房屋', bf:'早餐要準備', ok:false, url:'https://maps.app.goo.gl/rbwq3y5XnVxMBo5a9' },
       tip:'吃完早餐再出發。\n有時間可以逛薄野。',
       items:[ S('todo','吃完早餐再出發'), D('約 2 小時 10 分'), S('shop','Stellar Place',{ q:'札幌ステラプレイス' }), S('spot','大通公園',{ q:'大通公園 札幌' }), S('food','狸小路附近吃飯'), S('shop','狸小路',{ q:'狸小路商店街' }), S('food','二條市場',{ note:'大磯海鮮丼', q:'二条市場 大磯' }), S('spot','薄野',{ note:'有時間可逛', q:'すすきの 札幌' }), S('food','晚餐（自由安排）') ] },
     { date:'11/10', wd:'二', route:'札幌 → 新千歲 → 高雄', short:'札幌・新千歲・高雄',
@@ -117,7 +117,7 @@
       }
       return '<li><div class="time">' + esc(it.t || '') + '</div>' + rail + '<div class="body">' + body + '</div></li>';
     }).join('');
-    var stay = d.stay ? '<div class="stay-card"><div class="k">TONIGHT</div><div class="n">' + esc(d.stay.name) + '</div><div class="ty">' + esc(d.stay.type) + '</div><span class="bf ' + (d.stay.ok ? 'ok' : 'no') + '">' + d.stay.bf + '</span>' + (d.stay.q ? '<div><a href="' + M(d.stay.q) + '" target="_blank" rel="noopener">在 Google Maps 開啟 ↗</a></div>' : '') + '</div>' : '';
+    var stay = d.stay ? '<div class="stay-card"><div class="k">TONIGHT</div><div class="n">' + esc(d.stay.name) + '</div><div class="ty">' + esc(d.stay.type) + '</div><span class="bf ' + (d.stay.ok ? 'ok' : 'no') + '">' + d.stay.bf + '</span>' + ((d.stay.url || d.stay.q) ? '<div><a href="' + (d.stay.url || M(d.stay.q)) + '" target="_blank" rel="noopener">在 Google Maps 開啟 ↗</a></div>' : '') + '</div>' : '';
     $('dayPanel').innerHTML =
       '<div class="day rise">' +
         '<div class="panel day-main"><div class="day-head"><div class="day-no">0' + (i+1) + '</div><div><div class="sub" style="margin:0">' + d.date + '（' + d.wd + '）</div><div class="day-route">' + d.route + '</div></div></div><ol class="tl">' + items + '</ol></div>' +
@@ -154,7 +154,7 @@
   /* ---------- stays ---------- */
   $('stayList').innerHTML = days.map(function(d, i){
     if (!d.stay) return '';
-    return '<div class="stay"><div class="night">第 ' + (i+1) + ' 晚・' + d.date + '（' + d.wd + '）</div><div class="n">' + esc(d.stay.name) + '</div><div class="ty">' + esc(d.stay.type) + '</div><span class="bf ' + (d.stay.ok ? 'ok' : 'no') + '">' + d.stay.bf + '</span></div>';
+    return '<div class="stay"><div class="night">第 ' + (i+1) + ' 晚・' + d.date + '（' + d.wd + '）</div><div class="n">' + esc(d.stay.name) + '</div><div class="ty">' + esc(d.stay.type) + '</div><span class="bf ' + (d.stay.ok ? 'ok' : 'no') + '">' + d.stay.bf + '</span>' + ((d.stay.url || d.stay.q) ? '<a class="maplink" style="align-self:flex-start" href="' + (d.stay.url || M(d.stay.q)) + '" target="_blank" rel="noopener">' + PIN + 'Google Maps</a>' : '') + '</div>';
   }).join('');
 
   /* ---------- checkbox lists (saved in this browser) ---------- */
@@ -298,10 +298,11 @@
   links.addEventListener('click', closeMenu);
   function route(){
     var h = (location.hash || '').slice(1);
-    var pack = h === 'packing';
-    $('viewTrip').hidden = pack; $('viewPack').hidden = !pack;
+    var pack = h === 'packing', refund = h === 'taxrefund';
+    $('viewTrip').hidden = pack || refund; $('viewPack').hidden = !pack; $('viewRefund').hidden = !refund;
     $('packLink').setAttribute('aria-current', pack ? 'page' : 'false');
-    if (pack) { window.scrollTo(0, 0); return; }
+    $('refundLink').setAttribute('aria-current', refund ? 'page' : 'false');
+    if (pack || refund) { window.scrollTo(0, 0); return; }
     var t = h && document.getElementById(h);
     if (t) requestAnimationFrame(function(){ t.scrollIntoView(); });
     else if (!h || h === 'top') window.scrollTo(0, 0);

@@ -9,6 +9,7 @@
 - 住宿與早餐
 - 出發前確認清單
 - 出國必帶清單（網址加上 `#packing`）
+- 線上退稅教學（網址加上 `#taxrefund`，圖片在 `images/taxrefund/`，取自日本國稅廳說明）
 
 打勾的項目會存在各自瀏覽器的 localStorage，不會跨裝置同步。
 
@@ -19,7 +20,7 @@ hokkaido-trip/
 ├── index.html      # 頁面結構
 ├── css/style.css   # 樣式（色票都在最上方 :root）
 ├── js/main.js      # 行程資料與互動
-├── images/         # 放 hero.jpg
+├── images/         # 放 hero.jpg；taxrefund/ 是退稅教學截圖
 ├── .nojekyll       # 讓 GitHub Pages 直接輸出靜態檔
 └── README.md
 ```
